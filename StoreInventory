@@ -1,0 +1,43 @@
+/**Inventory
+Bagels (1, 50, 2, 1)
+Biscuits (2, 55, 3, 2)
+Cookies (3, 60, 4, 3)
+Tortellini (4, 65, 5, 4)
+Penne (5, 70, 6, 5)
+Gnocchi (6, 75, 7, 6)
+Tortillas (7, 80, 8, 7)
+Dumplings (8, 85, 9, 8)
+Udon  (9, 90, 10, 9)
+Rice (10, 95, 11, 10)
+Chips (11, 100, 12, 11)
+Crackers (12, 105, 13, 12)
+Pretzels (13, 110, 14, 13)
+Spaghetti (14, 115, 15, 14)
+Rolls (15, 120, 16, 15)
+**/
+
+CREATE TABLE inventory (id INTEGER PRIMARY KEY, name TEXT, aisle INTEGER, calories INTEGER, price INTEGER, quantity INTEGER);
+
+INSERT INTO inventory VALUES (1, "Bagels", 1, 50, 2, 1);
+INSERT INTO inventory VALUEs (2, "Biscuits", 2, 55, 3, 2);
+INSERT INTO inventory VALUES (3, "Cookies", 3, 60, 4, 3);
+INSERT INTO inventory VALUES (4, "Tortellini", 4, 65, 5, 4);
+INSERT INTO inventory VALUES (5, "Penne", 5, 70, 6, 5);
+INSERT INTO inventory VALUES (6, "Gnocchi", 6, 75, 7, 6);
+INSERT INTO inventory VALUES (7, "Tortillas", 7, 80, 8, 7);
+INSERT INTO inventory VALUES (8, "Dumplings", 8, 85, 9, 8);
+INSERT INTO inventory VALUES (9, "Udon", 9, 90, 10, 9);
+INSERT INTO inventory VALUES (10, "Rice", 10, 95, 11, 10);
+INSERT INTO inventory VALUES (11, "Chips", 11, 100, 12, 11);
+INSERT INTO inventory VALUES (12, "Crackers", 12, 105, 13, 12);
+INSERT INTO inventory VALUES (13, "Pretzels", 13, 110, 14, 13);
+INSERT INTO inventory VALUES (14, "Spaghetti", 14, 115, 15, 14);
+INSERT INTO inventory VALUES (15, "Rolls", 15, 120, 16, 15);
+
+SELECT SUM(calories) FROM inventory;
+SELECT SUM(price) FROM inventory;
+SELECT SUM(quantity) FROM inventory;
+
+SELECT MAX(quantity) FROM inventory;
+
+SELECT SUM(calories) FROM inventory GROUP BY aisle;
